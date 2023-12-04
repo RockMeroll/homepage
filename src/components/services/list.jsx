@@ -2,7 +2,7 @@ import classNames from "classnames";
 
 import Item from "components/services/item";
 
-export default function List({ group, services, layout }) {
+export default function List({ group, services}) {
   return (
     <ul
       className={classNames(
