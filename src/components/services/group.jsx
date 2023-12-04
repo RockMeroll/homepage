@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import classNames from "classnames";
 import { Disclosure, Transition } from "@headlessui/react";
-import { MdKeyboardArrowDown } from "react-icons/md";
 
 import List from "components/services/list";
 import ResolvedIcon from "components/resolvedicon";
@@ -33,12 +32,6 @@ export default function ServicesGroup({ group, services, layout, fiveColumns, di
                 <h2 className="flex text-theme-800 dark:text-theme-300 text-xl font-medium service-group-name">
                   {services.name}
                 </h2>
-                {/* <MdKeyboardArrowDown
-                  className={classNames(
-                    disableCollapse ? "hidden" : "",
-                    "transition-all opacity-0 group-hover:opacity-100 ml-auto text-theme-800 dark:text-theme-300 text-xl",
-                    open ? "" : "rotate-180",
-                  )}
                 /> */}
               </Disclosure.Button>
             )}
