@@ -8,7 +8,8 @@ export default function List({ group, services, layout }) {
   return (
     <ul
       className={classNames(
-        layout?.style === "row" ? `grid ${columnMap[layout?.columns]} gap-x-2` : "flex flex-col",
+        // layout?.style === "row" ? `grid ${columnMap[layout?.columns]} gap-x-2` : "flex flex-col",
+        "flex gap-4 justify-center flex-wrap",
         "mt-3 services-list",
       )}
     >

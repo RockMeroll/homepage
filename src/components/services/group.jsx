@@ -14,7 +14,8 @@ export default function ServicesGroup({ group, services, layout, fiveColumns, di
       key={services.name}
       className={classNames(
         "services-group",
-        layout?.style === "row" ? "basis-full" : "basis-full md:basis-1/2 lg:basis-1/3 xl:basis-1/4",
+        // layout?.style === "row" ? "basis-full" : "basis-full md:basis-1/2 lg:basis-1/3 xl:basis-1/4",
+        layout?.style === "row" ? "w-2/3" : "w-2/3 md:basis-1/2 lg:basis-1/3 xl:basis-1/4",
         layout?.style !== "row" && fiveColumns ? "3xl:basis-1/5" : "",
         layout?.header === false ? "flex-1 px-1 -my-1" : "flex-1 p-1",
       )}
@@ -23,7 +24,7 @@ export default function ServicesGroup({ group, services, layout, fiveColumns, di
         {({ open }) => (
           <>
             {layout?.header !== false && (
-              <Disclosure.Button disabled={disableCollapse} className="flex w-full select-none items-center group">
+              <Disclosure.Button disabled={disableCollapse} className="flex w-full select-none items-center justify-center group">
                 {layout?.icon && (
                   <div className="flex-shrink-0 mr-2 w-7 h-7 service-group-icon">
                     <ResolvedIcon icon={layout.icon} />
@@ -32,13 +33,13 @@ export default function ServicesGroup({ group, services, layout, fiveColumns, di
                 <h2 className="flex text-theme-800 dark:text-theme-300 text-xl font-medium service-group-name">
                   {services.name}
                 </h2>
-                <MdKeyboardArrowDown
+                {/* <MdKeyboardArrowDown
                   className={classNames(
                     disableCollapse ? "hidden" : "",
                     "transition-all opacity-0 group-hover:opacity-100 ml-auto text-theme-800 dark:text-theme-300 text-xl",
                     open ? "" : "rotate-180",
                   )}
-                />
+                /> */}
               </Disclosure.Button>
             )}
             <Transition

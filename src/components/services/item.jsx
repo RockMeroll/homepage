@@ -32,12 +32,12 @@ export default function Item({ service, group }) {
   };
 
   return (
-    <li key={service.name} id={service.id} className="service" data-name={service.name || ""}>
+    <li key={service.name} id={service.id} className="service flex-shrink-0" data-name={service.name || ""}>
       <div
         className={classNames(
           settings.cardBlur !== undefined && `backdrop-blur${settings.cardBlur.length ? "-" : ""}${settings.cardBlur}`,
           hasLink && "cursor-pointer",
-          "transition-all h-15 mb-2 p-1 rounded-md font-medium text-theme-700 dark:text-theme-200 dark:hover:text-theme-300 shadow-md shadow-theme-900/10 dark:shadow-theme-900/20 bg-theme-100/20 hover:bg-theme-300/20 dark:bg-white/5 dark:hover:bg-white/10 relative overflow-clip service-card",
+          "transition-all w-60 h-15 mb-2 p-1 rounded-md font-medium text-theme-700 dark:text-theme-200 dark:hover:text-theme-300 shadow-md shadow-theme-900/10 dark:shadow-theme-900/20 bg-theme-100/20 hover:bg-theme-300/20 dark:bg-white/5 dark:hover:bg-white/10 relative overflow-clip service-card",
         )}
       >
         <div className="flex select-none z-0 service-title">
@@ -66,7 +66,7 @@ export default function Item({ service, group }) {
             >
               <div className="flex-1 px-2 py-2 text-sm text-left z-10 service-name">
                 {service.name}
-                <p className="text-theme-500 dark:text-theme-300 text-xs font-light service-description">
+                <p className="w-5/6 text-theme-500 dark:text-theme-300 text-xs font-light service-description overflow-hidden whitespace-nowrap overflow-ellipsis">
                   {service.description}
                 </p>
               </div>
@@ -75,7 +75,7 @@ export default function Item({ service, group }) {
             <div className="flex-1 flex items-center justify-between rounded-r-md service-title-text">
               <div className="flex-1 px-2 py-2 text-sm text-left z-10 service-name">
                 {service.name}
-                <p className="text-theme-500 dark:text-theme-300 text-xs font-light service-description">
+                <p className="w-5/6 text-theme-500 dark:text-theme-300 text-xs font-light service-description overflow-hidden whitespace-nowrap overflow-ellipsis">
                   {service.description}
                 </p>
               </div>
