@@ -297,7 +297,7 @@ function Home({ initialSettings }) {
           </div>
         )}
         {layoutGroups.length > 0 && (
-          <div key="layoutGroups" id="layout-groups" className="flex flex-wrap m-4 sm:m-8 sm:mt-4 items-start mb-2">
+          <div key="layoutGroups" id="layout-groups" className="flex flex-col items-center flex-wrap m-4 sm:m-8 sm:mt-4 mb-2">
             {layoutGroups.map((group) =>
               group.services ? (
                 <ServicesGroup
