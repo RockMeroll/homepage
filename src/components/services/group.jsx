@@ -13,14 +13,13 @@ export default function ServicesGroup({ group, services, layout, fiveColumns, di
       key={services.name}
       className={classNames(
         "services-group",
-        // layout?.style === "row" ? "basis-full" : "basis-full md:basis-1/2 lg:basis-1/3 xl:basis-1/4",
         layout?.style === "row" ? "w-2/3" : "w-2/3 md:basis-1/2 lg:basis-1/3 xl:basis-1/4",
         layout?.style !== "row" && fiveColumns ? "3xl:basis-1/5" : "",
         layout?.header === false ? "flex-1 px-1 -my-1" : "flex-1 p-1",
       )}
     >
       <Disclosure defaultOpen>
-        {({ open }) => (
+        {() => (
           <>
             {layout?.header !== false && (
               <Disclosure.Button disabled={disableCollapse} className="flex w-full select-none items-center justify-center group">
@@ -32,7 +31,6 @@ export default function ServicesGroup({ group, services, layout, fiveColumns, di
                 <h2 className="flex text-theme-800 dark:text-theme-300 text-xl font-medium service-group-name">
                   {services.name}
                 </h2>
-                /> */}
               </Disclosure.Button>
             )}
             <Transition
