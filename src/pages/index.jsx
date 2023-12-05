@@ -416,7 +416,7 @@ function Home({ initialSettings }) {
           <div
             id="widgets-wrap"
             style={{ width: "calc(100% + 1rem)" }}
-            className={classNames("flex flex-row w-full flex-wrap justify-between -ml-2 -mr-2")}
+            className={classNames("flex flex-row w-full flex-wrap justify-center -ml-2 -mr-2")}
           >
             {widgets && (
               <>
