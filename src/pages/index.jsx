@@ -416,7 +416,7 @@ function Home({ initialSettings }) {
           <div
             id="widgets-wrap"
             style={{ width: "calc(100% + 1rem)" }}
-            className={classNames("flex flex-row w-full flex-wrap justify-center -ml-2 -mr-2")}
+            className={classNames("flex flex-row w-full flex-wrap justify-between -ml-2 -mr-2")}
           >
             {widgets && (
               <>
@@ -429,24 +429,6 @@ function Home({ initialSettings }) {
                       style={{ header: headerStyle, isRightAligned: false, cardBlur: settings.cardBlur }}
                     />
                   ))}
-
-                <div
-                  id="information-widgets-right"
-                  className={classNames(
-                    "m-auto flex flex-wrap grow sm:basis-auto justify-between md:justify-end",
-                    headerStyle === "boxedWidgets" ? "sm:ml-4" : "sm:ml-2",
-                  )}
-                >
-                  {widgets
-                    .filter((widget) => rightAlignedWidgets.includes(widget.type))
-                    .map((widget, i) => (
-                      <Widget
-                        key={i}
-                        widget={widget}
-                        style={{ header: headerStyle, isRightAligned: true, cardBlur: settings.cardBlur }}
-                      />
-                    ))}
-                </div>
               </>
             )}
           </div>
